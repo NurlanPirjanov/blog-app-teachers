@@ -1,7 +1,7 @@
 # Blog App for teachers
 A simple Blog App built with django
 
-![blog app teachers]()
+![blog app teachers](https://github.com/NurlanPirjanov/blog-app-teachers/raw/main/static/img/screen_app.jpg)
 ### Setup
 To get this repository, run the following command inside your git enabled terminal
 ```bash
