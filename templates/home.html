@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Gulzar Bekimbetova{% endblock title %}
+{% block content %}
+    <div class="grid grid-cols-1 md:grid-cols-6 gap-4 m-3">
+        <div class="col-span-2">
+            <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl duration-300 hover:shadow-2xl">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="{% static 'img/my_photo.jpg' %}" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Gulzar Bekimbetova</h5>
+                    <p class="mb-3 font-normal text-gray-700">Qanlikól rayonı XBBne qaraslı 19-sanlı qánigelestirilgen mámleketlik ulıwma bilim beriw mektebiniń baslawısh klass muǵallimi</p>
+                </div>
+            </div>
+        </div>
+        <div class="m-3.5 h-30 w-40 bg-gray-100 shadow rounded-xl flex flex-col items-center justify-center text-center duration-300 bg-white hover:shadow-2xl">
+            <img class="max-h-20" src="{% static 'img/books.png' %}" alt="">
+            <span class="font-semibold">Kitapxana</span>
+        </div>
+        <div class="m-3.5 h-30 w-40 bg-gray-100 shadow rounded-xl flex flex-col items-center justify-center text-center duration-300 bg-white hover:shadow-2xl">
+            <img class="max-h-20" src="{% static 'img/news.png' %}" alt="">
+            <span class="font-semibold">Jańalıqlar</span>
+        </div>
+        <div class="m-3.5 h-30 w-40 bg-gray-100 shadow rounded-xl flex flex-col items-center justify-center text-center duration-300 bg-white hover:shadow-2xl">
+            <img class="max-h-20" src="{% static 'img/edu.png' %}" alt="">
+            <span class="font-semibold">Onlayn sabaqlıq</span>
+        </div>
+        <div class="m-3.5 h-30 w-40 bg-gray-100 shadow rounded-xl flex flex-col items-center justify-center text-center duration-300 bg-white hover:shadow-2xl">
+            <img class="max-h-20" src="{% static 'img/link.jpg' %}" alt="">
+            <span class="font-semibold">Paydalı siltemeler</span>
+        </div>
+    </div>
+    {% include 'components/news.html' %}
+{% endblock content %}

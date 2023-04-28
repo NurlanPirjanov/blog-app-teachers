@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Kitaplar{% endblock title %}
+{% block content %}
+    <div class="bg-white p-5 text-2xl font-bold  text-center">Kitaplar</div>
+    <div class="container">
+        <div class="container mx-auto p-8">
+            <div class="flex flex-row flex-wrap -mx-2">
+                {% for book in object_list %}
+                    <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+                        <div class="flex justify-center md:justify-end -mt-16">
+                            {% if book.photo %}
+                                <img class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src="{{ book.photo.url }}" alt="">
+                            {% endif %}
+                        </div>
+                        <div>
+                            <h2 class="text-gray-800 text-3xl font-semibold"><p class="text-xl font-medium text-indigo-500">{{ book.title }}</p></h2>
+                        </div>
+                        <div class="flex justify-end mt-4">
+                            <div class="text-xl font-medium text-gray-500">{{book.book_author}}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

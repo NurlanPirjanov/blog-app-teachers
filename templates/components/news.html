@@ -1,0 +1,22 @@
+<div class="text-center text-md py-5 font-bold bg-white shadow-lg">Sońǵı jańalıqlar</div>
+<section class="p-2 bg-gray-100">
+    <div class="mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+        {% for i in object_list %}
+            <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
+                <a href="{% url 'article_detail' i.id %}">
+                    <div class="relative flex items-end overflow-hidden rounded-xl">
+                        <img class="object-cover w-full h-36" src="{{ i.photo.url }}" alt="{{ i.title }}" />
+                    </div>
+                    <div class="mt-1 p-2">
+                        <h2 class="text-slate-700">{{ i.title }}</h2>
+                        <p class="mt-1 text-sm text-slate-400">{{ i.summary }}</p>
+
+                        <div class="mt-3 flex items-end justify-between">
+                            <p class="text-lg font-bold text-blue-500">{{ i.date }}</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+</section>

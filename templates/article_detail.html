@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="my-3 sm:mx-2 md:mx-5 lg:mx-10 xl:mx-12 2xl:mx-20 bg-white rounded-lg shadow-md ">
+        <div class="m-3 py-5">
+            <p class="flex text-md">
+                <span class="material-symbols-outlined">calendar_month</span>
+                {{ object.date }}
+                <span class="material-symbols-outlined">account_circle</span>
+                {{ object.author.last_name | title }} {{ object.author.first_name | title }}</p>
+            <h1 class="mt-5 font-bold">{{ object.title }}</h1>
+        </div>
+        <div class="m-3">
+            {% if object.video_youtube %}
+                <iframe width="560" height="315" src="{{ object.video_youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {% endif %}
+            {{ object.body | safe }}
+            <br>
+            {% if request.user.id == object.author.id %}
+                <a href="{% url 'article_edit' article.pk %}">Ózgertiw</a> |
+                <a href="{% url 'article_delete' article.pk %}">Óshiriw</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}
