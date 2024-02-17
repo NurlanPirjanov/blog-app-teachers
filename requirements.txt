@@ -3,4 +3,4 @@ django-ckeditor==6.5.1
 django-crispy-forms==1.14.0
 environs==9.5.0
 mysqlclient==2.1.1
-Pillow==9.5.0
+Pillow==10.2.0
